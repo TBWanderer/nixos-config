@@ -8,6 +8,9 @@
 			url = "github:nix-community/home-manager/";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		rust-overlay = {
+			url = "github:oxalica/rust-overlay";
+		};	
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -17,7 +20,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					./modules/home.nix
-					./mosules/base.nix
+					./modules/base.nix
 					./modules/nvidia.nix
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix
