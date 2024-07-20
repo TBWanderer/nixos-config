@@ -1,0 +1,36 @@
+{ pkgs, ... }:
+{
+	home.packages = with pkgs; [
+		waybar
+		cava
+		pamixer
+		grim
+		slurp
+		wl-clipboard
+		cliphist
+		libreoffice
+		gcc
+		gnumake
+		direnv
+		pavucontrol
+		zip
+		unzip
+		python311
+		python311Packages.pip
+		pulseaudio
+		nixd
+		tree
+		bottom
+		bear
+		lazygit
+		git
+		ripgrep
+		brightnessctl
+		github-cli
+		alsa-utils
+		exiftool
+		swayimg
+		mpv
+		hyprland
+	];
+}

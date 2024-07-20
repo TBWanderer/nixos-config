@@ -1,0 +1,7 @@
+{
+	imports = [
+		./lockscreen
+		./waybar
+		./hyprland
+	];
+}
