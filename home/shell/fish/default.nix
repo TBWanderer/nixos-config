@@ -17,4 +17,5 @@
 			vim = "nvim";
 			light = "brightnessctl s";
 		};
+	};
 }

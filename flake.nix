@@ -17,6 +17,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					./modules/home.nix
+					./mosules/base.nix
 					./modules/nvidia.nix
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix
