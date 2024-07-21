@@ -3,16 +3,19 @@
 	services.xserver.videoDrivers = lib.mkForce ["nvidia"];
 	
 	hardware = {
-		opengl.enable = true;
+		graphics = {
+			enable = true;
+			enable32Bit = true;
+		};
 		nvidia = {
-			modesettings.enable = true;
-			powerManagment = {
+			modesetting.enable = true;
+			powerManagement = {
 				enable = false;
 				finegrained = false;
 			};
 			open = false;
 			nvidiaSettings = true;
-			package = config.boot.kernelPackages.nvidiaPackages.stable;
+			package = config.boot.kernelPackages.nvidiaPackages.beta;
 		};
 	};
 }

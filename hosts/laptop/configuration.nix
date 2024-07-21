@@ -70,8 +70,10 @@
 	#	 ];
 	};
 
+	nixpkgs.config.allowUnfree = true;
+
 	environment.systemPackages = with pkgs; [
-		( import ./lockscreen.nix { inherit pkgs; } )
+		( import ../../home/visual/lockscreen { inherit pkgs; } )
 		vim 
 		wget
 		neovim
@@ -122,6 +124,6 @@
 		'';
 	};
 
-	system.stateVersion = "24.05"; 
+	system.stateVersion = "24.11"; 
 }
 

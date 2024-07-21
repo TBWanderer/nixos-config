@@ -1,6 +1,5 @@
 {
 	imports = [
-		./lockscreen
 		./waybar
 		./hyprland
 	];
