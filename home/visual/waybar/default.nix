@@ -101,7 +101,7 @@
 				"backlight" = {
 					device = "intel_backlight";
 					format = "{percent}% {icon}";
-					format-icons = [" ", " "];
+					format-icons = [" " " "];
 				};
 
 				"hyprland/window" = {
@@ -153,7 +153,7 @@
 					max-length = 60;
 					escape = true;
 					tooltip = false;
-					exec = "${import ../../shell/cava/default.nix { inherit pkgs; }}/bin/cava_waybar";
+					exec = "${import ../../shell/cava { inherit pkgs; }}/bin/cava_waybar";
 				};
 			};
 		};

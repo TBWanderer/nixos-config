@@ -5,7 +5,7 @@
 	home-manager = {
 		useGlobalPkgs = true;
 		useUserPackages = true;
-		backupFileExtention = "old";
+		backupFileExtension = "old";
 		
 		users = {
 			x = ../home;
@@ -16,5 +16,4 @@
 			sys = config;
 		};
 	};
-	programs.home-manager.enable = true;
 }

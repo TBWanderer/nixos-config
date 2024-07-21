@@ -16,8 +16,8 @@ pkgs.writeShellScriptBin "checkbattery" ''
 		icon=$full_icon
 	else
 		for i in {0..4}; do
-			if [ "$capacity" -le "${values[$i]}" ] && [ "$result" = "" ]; then
-				icon=${icons[$i]}
+			if [ "$capacity" -le "''${values[$i]}" ] && [ "$result" = "" ]; then
+				icon=''${icons[$i]}
     			break
 			fi
 		done
