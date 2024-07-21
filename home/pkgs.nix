@@ -8,10 +8,12 @@
 		blueman
 		bluez
 		bottom
+		brave
 		brightnessctl
 		cava
 		cinnamon.nemo
 		cliphist
+		cool-retro-term
 		direnv
 		eza
 		git

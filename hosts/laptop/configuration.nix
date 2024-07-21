@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 {
 	imports = [
 			./hardware-configuration.nix
@@ -27,6 +27,7 @@
 			enable = true;
 			powerOnBoot = true;
 		};
+		pulseaudio.enable = lib.mkForce false;
 	};
 
 	services = {
@@ -45,7 +46,7 @@
 	};
 
 	networking = {
-		hostName = "nixos-lp";
+		hostName = "laptop";
 		networkmanager.enable = true;
 		proxy = {
 		# 	default = "http://user:password@host.com:1234/";
@@ -59,12 +60,6 @@
 	};
 	
 	time.timeZone = "Europe/Moscow";
-
-	# services.xserver.enable = true;
-
-	# services.xserver.xkb.layout = "us";
-	# services.xserver.xkb.options = "eurosign:e,caps:escape";
-
 
 	nixpkgs.config.allowUnfree = true;
 

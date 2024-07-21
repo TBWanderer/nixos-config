@@ -16,6 +16,7 @@
 			o = "nvim";
 			vim = "nvim";
 			light = "brightnessctl s";
+			update = "nh os switch /home/x/nixos-config";
 		};
 	};
 }
