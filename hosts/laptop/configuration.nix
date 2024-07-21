@@ -38,6 +38,10 @@
 		blueman.enable = true;
 		libinput.enable = true;
 		openssh.enable = true;
+		
+		xserver = {
+			desktopManager.cinnamon.enable = true;	
+		};
 	};
 
 	networking = {
@@ -61,14 +65,6 @@
 	# services.xserver.xkb.layout = "us";
 	# services.xserver.xkb.options = "eurosign:e,caps:escape";
 
-	users.users.x = {
-		isNormalUser = true;
-		extraGroups = [ "wheel" ];
-	#	 packages = with pkgs; [
-	#		 firefox
-	#		 tree
-	#	 ];
-	};
 
 	nixpkgs.config.allowUnfree = true;
 
@@ -80,29 +76,14 @@
 		gitFull
 		github-cli
 		lynx
-		hyprland
-		alacritty
 		fish
-		brave
 		unzip
 		gcc
-		waybar
-		rofi-wayland
-		audacity
-		bluez
-		blueman
-		cinnamon.nemo
 		zulu17
 		exiftool
-		swayimg
 		cliphist
-		swaylock-effects
-		grim
-		slurp
-		wl-clipboard
 		lazygit
-		wine
-		pamixer
+		kdePackages.breeze-icons
 	];
 
 	fonts.packages = with pkgs; [(
@@ -115,6 +96,7 @@
 		git.enable = true;
 		hyprland.enable = true;
 		fish.enable = true;
+		starship.enable = true;
 	};
 
 	nix = {
@@ -122,6 +104,16 @@
 		extraOptions = ''
 			experimental-features = nix-command flakes
 		'';
+	};
+
+	users.users.x = {
+		isNormalUser = true;
+		extraGroups = [ "wheel" ];
+		shell = pkgs.fish;
+	#	 packages = with pkgs; [
+	#		 firefox
+	#		 tree
+	#	 ];
 	};
 
 	system.stateVersion = "24.11"; 

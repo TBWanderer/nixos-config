@@ -1,36 +1,44 @@
 { pkgs, ... }:
 {
 	home.packages = with pkgs; [
-		waybar
+		alsa-utils
+		alsa-utils
+		audacity
+		bear
+		blueman
+		bluez
+		bottom
+		brightnessctl
 		cava
-		pamixer
-		grim
-		slurp
-		wl-clipboard
+		cinnamon.nemo
 		cliphist
-		libreoffice
-		gcc
-		gnumake
 		direnv
+		eza
+		git
+		github-cli
+		gnumake
+		grim
+		hyprland
+		lazygit
+		libreoffice
+		mpv
+		nh
+		nixd
+		pamixer
 		pavucontrol
-		zip
-		unzip
 		python311
 		python311Packages.pip
-		pulseaudio
-		nixd
-		tree
-		bottom
-		bear
-		lazygit
-		git
 		ripgrep
-		brightnessctl
-		github-cli
-		alsa-utils
-		exiftool
+		rofi-wayland
+		slurp
 		swayimg
-		mpv
-		hyprland
+		swaylock-effects
+		telegram-desktop
+		tor-browser
+		tree
+		unzip
+		waybar
+		wl-clipboard
+		zip	
 	];
 }

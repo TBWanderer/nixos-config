@@ -21,7 +21,7 @@
 		
 				modules-center  = ["bluetooth" "custom/cava" "network"];
 				modules-left  = ["hyprland/workspaces" "hyprland/window"];
-				modules-right  = ["tray" "cpu" "memory" "custom/brightness" "custom/pipewire" "custom/battery" "hyprland/language" "clock"];
+				modules-right  = ["tray" "cpu" "memory" "backlight" "custom/pipewire" "custom/battery" "hyprland/language" "clock"];
 				"hyprland/workspaces" = {
 					format = "{icon}";
 					on-scroll-up = "hyprctl dispatch workspace e+1";
