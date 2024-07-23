@@ -2,6 +2,5 @@
 	imports = [
 		./fish
 		./alacritty
-		./turnip
 	];
 }
