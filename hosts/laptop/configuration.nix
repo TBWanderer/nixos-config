@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 {
 	imports = [
 			./hardware-configuration.nix
@@ -39,7 +39,8 @@
 		blueman.enable = true;
 		libinput.enable = true;
 		openssh.enable = true;
-		
+		getty.autologinUser = "x";
+
 		xserver = {
 			desktopManager.cinnamon.enable = true;	
 		};
@@ -65,6 +66,18 @@
 
 	environment.systemPackages = with pkgs; [
 		( import ../../home/visual/lockscreen { inherit pkgs; } )
+		
+		inputs.forkgram.packages.x86_64-linux.default
+		
+		(pkgs.wrapOBS {
+    		plugins = with pkgs.obs-studio-plugins; [
+    			wlrobs
+    			obs-backgroundremoval
+    			obs-pipewire-audio-capture
+    		];
+		})
+
+		openssl
 		vim 
 		wget
 		neovim
@@ -79,6 +92,8 @@
 		cliphist
 		lazygit
 		kdePackages.breeze-icons
+		steamcmd
+		steam-tui
 	];
 
 	fonts.packages = with pkgs; [(
@@ -92,6 +107,11 @@
 		hyprland.enable = true;
 		fish.enable = true;
 		starship.enable = true;
+		steam.enable = true;
+		steam = {
+			remotePlay.openFirewall = true;
+			dedicatedServer.openFirewall = true;
+		};
 	};
 
 	nix = {

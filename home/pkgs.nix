@@ -10,12 +10,14 @@
 		bottom
 		brave
 		brightnessctl
+		burpsuite
 		cava
 		cinnamon.nemo
 		cliphist
-		cool-retro-term
 		direnv
+		eschalot
 		eza
+		firefox
 		git
 		github-cli
 		gnumake
@@ -28,14 +30,15 @@
 		nixd
 		pamixer
 		pavucontrol
+		prismlauncher
 		python311
 		python311Packages.pip
 		ripgrep
 		rofi-wayland
 		slurp
+		sqlmap
 		swayimg
 		swaylock-effects
-		telegram-desktop
 		tor-browser
 		tree
 		unzip

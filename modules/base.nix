@@ -1,7 +1,11 @@
 { inputs, ... }: {
 	imports = [
+		inputs.turnip.nixosModules.turnip
 		inputs.stylix.nixosModules.stylix
 		../stylix
-		../modules/rust.nix
+		./rust.nix
 	];
+	config = {
+		turnip.enable = true;
+	};
 }

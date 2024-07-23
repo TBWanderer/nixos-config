@@ -10,7 +10,9 @@
 		};
 		rust-overlay = {
 			url = "github:oxalica/rust-overlay";
-		};	
+		};
+		forkgram.url = "github:proggerx/forkgram-flake/main";
+		turnip.url = "github:ProggerX/turnip";
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {
