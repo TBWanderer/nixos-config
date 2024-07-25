@@ -4,6 +4,7 @@
 		alsa-utils
 		alsa-utils
 		audacity
+		autopsy
 		bear
 		blueman
 		bluez
@@ -26,6 +27,7 @@
 		lazygit
 		libreoffice
 		mpv
+		neovide
 		nh
 		nixd
 		pamixer
@@ -43,6 +45,7 @@
 		tree
 		unzip
 		waybar
+		wireshark
 		wl-clipboard
 		zip	
 	];

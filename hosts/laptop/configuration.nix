@@ -101,11 +101,16 @@
 			fonts = [ "JetBrainsMono" ];
 		}
 	)];
+	
+	virtualisation = {
+		waydroid.enable = true;
+	};
 
 	programs = {
 		git.enable = true;
 		hyprland.enable = true;
 		fish.enable = true;
+		wireshark.enable = true;
 		starship.enable = true;
 		steam.enable = true;
 		steam = {
@@ -123,7 +128,7 @@
 
 	users.users.x = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" ];
+		extraGroups = [ "wheel" "wireshark" ];
 		shell = pkgs.fish;
 	#	 packages = with pkgs; [
 	#		 firefox

@@ -21,6 +21,7 @@
 			cls = "clear";
 			c = "clear";
 			o = "nvim";
+			og = "neovide";
 			vim = "nvim";
 			light = "brightnessctl s";
 			update = "nh os switch /home/x/nixos-config";

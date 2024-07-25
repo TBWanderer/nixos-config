@@ -1,8 +1,10 @@
 { lib, ... }:
 {
+	turnip.colorscheme = "catppuccin";
 	turnip.custom = {
+		options.relativenumber = lib.mkForce false;
 		plugins = {
-			oil.enable = false;
+			oil.enable = lib.mkForce false;
 			mini = {
 				enable = true;
 				modules = { files = {}; };
