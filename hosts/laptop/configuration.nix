@@ -94,6 +94,7 @@
 		kdePackages.breeze-icons
 		steamcmd
 		steam-tui
+		wl-clipboard
 	];
 
 	fonts.packages = with pkgs; [(
@@ -112,6 +113,10 @@
 		fish.enable = true;
 		wireshark.enable = true;
 		starship.enable = true;
+		yandex-music = {
+			enable = true;
+			tray.enable = true;
+		};
 		steam.enable = true;
 		steam = {
 			remotePlay.openFirewall = true;

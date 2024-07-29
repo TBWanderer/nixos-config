@@ -19,7 +19,7 @@
 				margin-top = 5;
 				margin-bottom = 5;
 		
-				modules-center  = ["bluetooth" "custom/cava" "network"];
+				modules-center  = ["bluetooth" "custom/cava" "custom/yandex-music" "network"];
 				modules-left  = ["hyprland/workspaces" "hyprland/window"];
 				modules-right  = ["tray" "cpu" "memory" "backlight" "custom/pipewire" "custom/battery" "hyprland/language" "clock"];
 				"hyprland/workspaces" = {
@@ -154,6 +154,15 @@
 					escape = true;
 					tooltip = false;
 					exec = "${import ../../shell/cava { inherit pkgs; }}/bin/cava_waybar";
+				};
+
+				"custom/yandex-music" = {
+					format = "  {}";
+					return-type = "text";
+					max-length = 40;
+					escape = true;
+					tooltip = false;
+					exec = "${import ../../shell/yandex-music { inherit pkgs; }}/bin/yandex_music_now_playing";
 				};
 			};
 		};

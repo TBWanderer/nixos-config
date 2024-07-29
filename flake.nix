@@ -13,6 +13,7 @@
 		};
 		forkgram.url = "github:proggerx/forkgram-flake/main";
 		turnip.url = "github:ProggerX/turnip";
+		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {

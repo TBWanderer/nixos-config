@@ -4,5 +4,6 @@
 		../stylix
 		./rust.nix
 		./turnip.nix
+		./yandex-music.nix
 	];
 }

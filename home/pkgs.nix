@@ -26,6 +26,7 @@
 		hyprland
 		lazygit
 		libreoffice
+		lzip
 		mpv
 		neovide
 		nh
@@ -39,14 +40,16 @@
 		rofi-wayland
 		slurp
 		sqlmap
+		stegsolve
 		swayimg
 		swaylock-effects
+		thunderbird
 		tor-browser
 		tree
 		unzip
 		waybar
+		whatsapp-for-linux
 		wireshark
-		wl-clipboard
 		zip	
 	];
 }

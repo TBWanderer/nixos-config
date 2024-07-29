@@ -2,6 +2,7 @@
 {
 	turnip.colorscheme = "catppuccin";
 	turnip.custom = {
+		colorschemes.catppuccin.settings.transparent_background = false;
 		options.relativenumber = lib.mkForce false;
 		plugins = {
 			oil.enable = lib.mkForce false;

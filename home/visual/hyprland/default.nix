@@ -13,7 +13,7 @@
 			exec-once = waybar
 			exec-once = wpaperd
 			exec-once = wl-paste --watch cliphist store
-			
+
 			general { 
 			    gaps_in = 5
 			    gaps_out = 10
@@ -174,6 +174,14 @@
 			bind = $mainMod CTRL, j, resizeactive,0 50
 			
 			bind = $mainMod CTRL, p, exec, powermenu
+			
+			bind = , XF86AudioMute, exec,  ${pkgs.pamixer}/bin/pamixer -t
+        	bind = , XF86AudioRaiseVolume, exec, ${pkgs.pamixer}/bin/pamixer -i2
+        	bind = , XF86AudioLowerVolume, exec, ${pkgs.pamixer}/bin/pamixer -d2
+        	bind = , XF86AudioPause, exec, ${pkgs.playerctl}/bin/playerctl play-pause
+        	bind = , XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play
+        	bind = , XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous
+        	bind = , XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next
 
 			windowrulev2 = suppressevent maximize, class:.* 
 		'';
