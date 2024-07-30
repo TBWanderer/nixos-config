@@ -9,7 +9,7 @@
 			$fileManager = nemo
 			$menu = rofi -show drun
 			
-			exec-once = "${ import ../lockscreen { inherit pkgs; } }/bin/lockscreen"
+			exec-once = hyprlock
 			exec-once = waybar
 			exec-once = wpaperd
 			exec-once = wl-paste --watch cliphist store
@@ -106,7 +106,7 @@
 			$mainMod = SUPER 
 
 			bind = $mainMod, C, killactive 
-			bind = $mainMod SHIFT, L, exec, "${ import ../lockscreen { inherit pkgs; } }/bin/lockscreen"
+			bind = $mainMod SHIFT, L, exec, hyprlock
 			bind = $mainMod, O, pin
 			bind = $mainMod, f, togglefloating, 
 			bind = $mainMod, M, exit
