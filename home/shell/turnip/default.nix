@@ -4,6 +4,13 @@
 	turnip.custom = {
 		colorschemes.catppuccin.settings.transparent_background = false;
 		options.relativenumber = lib.mkForce false;
+		autoCmd = [
+				{
+					command = "lua vim.lsp.buf.format()";
+					event = ["BufWritePre"];
+					pattern = ["*.rs" "*.js"];
+				}
+				];
 		plugins = {
 			oil.enable = lib.mkForce false;
 			mini = {
