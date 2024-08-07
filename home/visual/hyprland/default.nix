@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
+	services.hyprpaper.enable = lib.mkForce false;
+	programs.wpaperd.enable = true;
 	wayland.windowManager.hyprland = {
 		enable = true;
 		extraConfig = ''
