@@ -13,7 +13,7 @@
 		brightnessctl
 		burpsuite
 		cava
-		cinnamon.nemo
+		nemo
 		cliphist
 		cool-retro-term
 		direnv
