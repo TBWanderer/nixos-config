@@ -20,6 +20,7 @@
 		supportedFilesystems = [
 			"ntfs"
 		];
+		kernelPackages = pkgs.linuxKernel.packages.linux_6_10;
 	};
 
 	hardware = {
@@ -35,7 +36,8 @@
 			enable = true;
 			pulse.enable = true;
 		};
-
+		
+		tailscale.enable = true;
 		blueman.enable = true;
 		libinput.enable = true;
 		openssh.enable = true;
@@ -64,38 +66,50 @@
 
 	nixpkgs.config.allowUnfree = true;
 
-	environment.systemPackages = with pkgs; [
-		( import ../../home/visual/lockscreen { inherit pkgs; } )
-		
-		inputs.forkgram.packages.x86_64-linux.default
-		
-		(pkgs.wrapOBS {
-    		plugins = with pkgs.obs-studio-plugins; [
-    			wlrobs
-    			obs-backgroundremoval
-    			obs-pipewire-audio-capture
-    		];
-		})
-
-		openssl
-		vim 
-		wget
-		neovim
-		gitFull
-		github-cli
-		lynx
-		fish
-		unzip
-		gcc
-		zulu17
-		exiftool
-		cliphist
-		lazygit
-		kdePackages.breeze-icons
-		steamcmd
-		steam-tui
-		wl-clipboard
-	];
+	environment = {
+		sessionVariables = {
+			PATH = [
+				"/usr/bin"
+				"/home/x/.local/bin"
+				"/home/x/.cargo/bin"
+			];
+			EDITOR = "vim";
+			DIRENV_LOG_FORMAT = "";
+		};
+		systemPackages = with pkgs; [
+			( import ../../home/visual/lockscreen { inherit pkgs; } )
+			
+			inputs.forkgram.packages.x86_64-linux.default
+			
+			(pkgs.wrapOBS {
+    			plugins = with pkgs.obs-studio-plugins; [
+    				wlrobs
+    				obs-backgroundremoval
+    				obs-pipewire-audio-capture
+    			];
+			})
+			
+			wireguard-tools
+			openssl
+			vim 
+			wget
+			neovim
+			gitFull
+			github-cli
+			lynx
+			fish
+			unzip
+			gcc
+			zulu17
+			exiftool
+			cliphist
+			lazygit
+			kdePackages.breeze-icons
+			steamcmd
+			steam-tui
+			wl-clipboard
+		];
+	};
 
 	fonts.packages = with pkgs; [(
 		nerdfonts.override { 
@@ -105,6 +119,7 @@
 	
 	virtualisation = {
 		waydroid.enable = true;
+		docker.enable = true;
 	};
 
 	programs = {
@@ -112,6 +127,7 @@
 		hyprland.enable = true;
 		fish.enable = true;
 		wireshark.enable = true;
+		nix-ld.enable = true;
 		starship.enable = true;
 		yandex-music = {
 			enable = true;
@@ -133,7 +149,7 @@
 
 	users.users.x = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "wireshark" ];
+		extraGroups = [ "wheel" "wireshark" "docker" ];
 		shell = pkgs.fish;
 	#	 packages = with pkgs; [
 	#		 firefox
