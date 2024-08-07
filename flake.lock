@@ -122,11 +122,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722940927,
-        "narHash": "sha256-l22Cq+FVm3ki5TUc95WXDYpYdIOylkqCpO0NM6yzzVQ=",
+        "lastModified": 1722967277,
+        "narHash": "sha256-rxJPTqOlKK3V25iE3H7FyEDkrDMANq4HKVvkG62z6W4=",
         "owner": "NotBalds",
         "repo": "cwe-rust-cli",
-        "rev": "32d9198fe92794328230450855a04e32b2c61592",
+        "rev": "b4b2bce9bef61aeb1c1c36586503c265e19ed7ad",
         "type": "github"
       },
       "original": {
@@ -383,11 +383,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1722630065,
-        "narHash": "sha256-QfM/9BMRkCmgWzrPDK+KbgJOUlSJnfX4OvsUupEUZvA=",
+        "lastModified": 1723015306,
+        "narHash": "sha256-jQnFEtH20/OsDPpx71ntZzGdRlpXhUENSQCGTjn//NA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "afc892db74d65042031a093adb6010c4c3378422",
+        "rev": "b3d5ea65d88d67d4ec578ed11d4d2d51e3de525e",
         "type": "github"
       },
       "original": {
@@ -624,11 +624,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1722910815,
-        "narHash": "sha256-v6Vk/xlABhw2QzOa6xh3Jx/IvmlbKbOazFM+bDFQlWU=",
+        "lastModified": 1722997267,
+        "narHash": "sha256-8Pncp8IKd0f0N711CRrCGTC4iLfBE+/5kaMqyWxnYic=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "7df2ac544c203d21b63aac23bfaec7f9b919a733",
+        "rev": "d720bf3cebac38c2426d77ee2e59943012854cb8",
         "type": "github"
       },
       "original": {
@@ -652,11 +652,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1722872544,
-        "narHash": "sha256-zxj4FLaqvBw7AR2ppEwn4qK//XpapKG33l8kcfY+QXs=",
+        "lastModified": 1722946882,
+        "narHash": "sha256-mxtnMye8gs82tdQbVC+g6v3aPOZlH150f9WyntHIkTg=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "c0309fc3f4315cfb7e1e588a43ed19516c8b6022",
+        "rev": "5853f1a8bd072f2ebabfc3de3973084353cf6f1e",
         "type": "github"
       },
       "original": {
@@ -758,11 +758,11 @@
         "ymExe": "ymExe"
       },
       "locked": {
-        "lastModified": 1722805445,
-        "narHash": "sha256-iF3VGuu/LBz+B62stpCohVJgozeozPMorMFKOgCas/g=",
+        "lastModified": 1722991074,
+        "narHash": "sha256-dm0ONxDzkfsXwHiOw4K1D/c6IsfOJkksNyVf/uWh+OA=",
         "owner": "cucumber-sp",
         "repo": "yandex-music-linux",
-        "rev": "bde0ca039a964bb7d81eb9409bf1ae02e733999e",
+        "rev": "6ab6b6eefff499ae4f6256b9a049efc2e1195ad3",
         "type": "github"
       },
       "original": {
@@ -774,13 +774,13 @@
     "ymExe": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-x8j2rQilAD1e2oDIhsfhIDWIbtxC2oIv/AhfuwRmnak=",
+        "narHash": "sha256-nMmUZov3j/vEs9+/5dbP1xSx80U9plrkqWkAtUTgeo8=",
         "type": "file",
-        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.8.3.exe"
+        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.9.4.exe"
       },
       "original": {
         "type": "file",
-        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.8.3.exe"
+        "url": "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_x64_5.9.4.exe"
       }
     }
   },
