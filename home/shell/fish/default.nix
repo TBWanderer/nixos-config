@@ -4,13 +4,8 @@
 		enable = true;
 		interactiveShellInit = ''
 			set fish_greeting
-			export PATH="/home/x/.local/bin:$PATH"
-			export PATH="/home/x/.cargo/bin:$PATH"
 		'';
 		loginShellInit = ''
-			set fish_greeting
-			export PATH="/home/x/.local/bin:$PATH"
-			export PATH="/home/x/.cargo/bin:$PATH"
 			Hyprland
 		'';
 		shellAliases = {
