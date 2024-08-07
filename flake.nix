@@ -14,6 +14,10 @@
 		forkgram.url = "github:proggerx/forkgram-flake/main";
 		turnip.url = "github:ProggerX/turnip";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
+		cwe-cli = {
+			url = "github:NotBalds/cwe-rust-cli";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {
