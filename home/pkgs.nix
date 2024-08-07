@@ -15,6 +15,7 @@
 		cava
 		cinnamon.nemo
 		cliphist
+		cool-retro-term
 		direnv
 		eschalot
 		eza
@@ -26,6 +27,7 @@
 		hyprland
 		lazygit
 		libreoffice
+		lutris
 		lzip
 		mpv
 		neovide
@@ -45,10 +47,12 @@
 		swaylock-effects
 		thunderbird
 		tor-browser
+		transmission_4-gtk
 		tree
 		unzip
 		waybar
 		whatsapp-for-linux
+		wineWowPackages.full
 		wireshark
 		zip	
 	];
