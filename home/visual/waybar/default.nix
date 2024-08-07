@@ -39,8 +39,10 @@
 						"8" = "8";
 						"9" = "9";
 						"10" = "0";
+						"11" = "O";
 						urgent = "!";
 					};
+					spacing = 0;
 				};
 		
 				"tray" = {
@@ -93,8 +95,8 @@
 				};
 		
 				"clock" = {
-					format = "{:%H:%M:%S}";
-					format-alt = "{:%d.%m.%y}";
+					format = "{:%H:%M}";
+					format-alt = "{:%d.%m}";
 					interval = 1;
 				};
 	
@@ -113,7 +115,7 @@
 		
 				"hyprland/language" = {
 					format = "{}";
-					format-us = "US";
+					format-en = "US";
 					format-ru = "RU";
 				};
 		

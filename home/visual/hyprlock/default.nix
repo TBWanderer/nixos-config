@@ -13,7 +13,7 @@
 			}
 			
 			general {
-			    hide_cursor = false
+			    hide_cursor = true
 			    grace = 0
 			    disable_loading_bar = true
 			}
@@ -58,17 +58,6 @@
 			  position = 0, 200
 			  halign = center
 			  valign = center
-			}
-			
-			label {
-			    monitor =
-			    text = cmd[update:1000] echo "$(whoami)"
-			    color = rgb(${sys.lib.stylix.colors.base05})
-			    font_size = 14
-			    font_family = JetBrainsMono Nerd Font
-			    position = 0, -10
-			    halign = center
-			    valign = top
 			}
 		'';
 	};
