@@ -5,7 +5,7 @@
 		../home/shell/turnip
 	];
 	config = {
-		turnip.enable = true;
+		turnip.enable = false;
 	};
 	
 }
