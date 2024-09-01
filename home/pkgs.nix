@@ -4,7 +4,6 @@
 		alsa-utils
 		alsa-utils
 		audacity
-		autopsy
 		bear
 		blueman
 		bluez
@@ -12,6 +11,7 @@
 		brave
 		brightnessctl
 		burpsuite
+		cassette
 		cava
 		nemo
 		cliphist
@@ -23,6 +23,7 @@
 		git
 		github-cli
 		gnumake
+		go
 		grim
 		hyprland
 		lazygit
@@ -50,10 +51,12 @@
 		transmission_4-gtk
 		tree
 		unzip
+		vesktop
 		waybar
 		whatsapp-for-linux
 		wineWowPackages.full
 		wireshark
+		xdg-utils
 		zip	
 	];
 }
