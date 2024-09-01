@@ -62,6 +62,8 @@
 		};
 	};
 	
+	xdg.portal.enable = true;
+
 	time.timeZone = "Europe/Moscow";
 
 	nixpkgs.config.allowUnfree = true;
@@ -89,6 +91,7 @@
     			];
 			})
 			
+			xdg-desktop-portal-hyprland
 			wireguard-tools
 			openssl
 			vim 
