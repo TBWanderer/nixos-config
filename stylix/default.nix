@@ -10,7 +10,7 @@
 		};
 		fonts = rec {
 			sizes = {
-				terminal = 17;
+				terminal = 14;
 			};
 			serif = {
 				package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
