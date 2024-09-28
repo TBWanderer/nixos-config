@@ -3,6 +3,7 @@
 
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		# nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     	stylix.url = "github:danth/stylix";	
 		home-manager = {
 			url = "github:nix-community/home-manager/";
@@ -12,7 +13,8 @@
 			url = "github:oxalica/rust-overlay";
 		};
 		forkgram.url = "github:proggerx/forkgram-flake/main";
-		turnip.url = "github:ProggerX/turnip";
+		ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/release?submodules=1";
+		zen-browser.url = "github:MarceColl/zen-browser-flake";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
 		cwe-cli = {
 			url = "github:NotBalds/cwe-rust-cli";

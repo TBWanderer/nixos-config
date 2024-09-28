@@ -3,6 +3,8 @@
 	home.packages = with pkgs; [
 		alsa-utils
 		alsa-utils
+		android-studio
+		arduino
 		audacity
 		bear
 		blueman
@@ -31,9 +33,11 @@
 		lutris
 		lzip
 		mpv
+		mpvpaper
 		neovide
 		nh
 		nixd
+		obsidian
 		pamixer
 		pavucontrol
 		prismlauncher
@@ -45,7 +49,7 @@
 		sqlmap
 		stegsolve
 		swayimg
-		swaylock-effects
+		swww
 		thunderbird
 		tor-browser
 		transmission_4-gtk
