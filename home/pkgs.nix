@@ -2,7 +2,6 @@
 {
 	home.packages = with pkgs; [
 		alsa-utils
-		alsa-utils
 		android-studio
 		arduino
 		audacity
@@ -10,12 +9,10 @@
 		blueman
 		bluez
 		bottom
-		brave
 		brightnessctl
 		burpsuite
 		cassette
 		cava
-		nemo
 		cliphist
 		cool-retro-term
 		direnv
@@ -24,20 +21,26 @@
 		firefox
 		git
 		github-cli
+		glade
 		gnumake
 		go
 		grim
 		hyprland
+		jetbrains.idea-community-bin
 		lazygit
 		libreoffice
 		lutris
 		lzip
 		mpv
 		mpvpaper
+		nemo
 		neovide
 		nh
 		nixd
+		npm
 		obsidian
+		ollama-cuda
+		p7zip
 		pamixer
 		pavucontrol
 		prismlauncher
@@ -50,7 +53,9 @@
 		stegsolve
 		swayimg
 		swww
+		syncthing
 		thunderbird
+		tor
 		tor-browser
 		transmission_4-gtk
 		tree

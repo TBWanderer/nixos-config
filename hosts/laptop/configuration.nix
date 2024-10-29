@@ -123,6 +123,10 @@
 	virtualisation = {
 		waydroid.enable = true;
 		docker.enable = true;
+		virtualbox.host = {
+			enable = true;
+			enableExtensionPack = true;
+		};
 	};
 
 	programs = {
@@ -152,7 +156,7 @@
 
 	users.users.x = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "wireshark" "docker" ];
+		extraGroups = [ "wheel" "wireshark" "docker" "vboxusers" ];
 		shell = pkgs.fish;
 	#	 packages = with pkgs; [
 	#		 firefox

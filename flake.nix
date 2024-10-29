@@ -3,7 +3,6 @@
 
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		# nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     	stylix.url = "github:danth/stylix";	
 		home-manager = {
 			url = "github:nix-community/home-manager/";
@@ -17,7 +16,7 @@
 		zen-browser.url = "github:MarceColl/zen-browser-flake";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
 		cwe-cli = {
-			url = "github:NotBalds/cwe-rust-cli";
+			url = "github:NotBalds/cwe-client-cli";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};

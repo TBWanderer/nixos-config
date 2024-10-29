@@ -7,12 +7,11 @@
 		extraConfig = ''
 			monitor=,1920x1080@144,0x0,1
 			
-			$terminal = alacritty
+			$terminal = alacritty --working-directory /home/x/
 			$fileManager = nemo
 			$menu = rofi -show drun
 			
-			exec-once = hyprlock
-			exec-once = waybar
+			exec-once = hyprlock && sleep 0.2 && waybar
 			exec-once = wpaperd
 			exec-once = wl-paste --watch cliphist store
 
@@ -125,8 +124,8 @@
 			bind = $mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
 			
 			bind = , PRINT, exec, grim -g"$(slurp)" - | wl-copy
-			bind = $mainMod, I, exec, grim -g"$(slurp)" -l 0 /home/x/screen.png
-			bind = $mainMod, P, exec, grim -l 0 /home/x/Pictures/"$(date +%T_%d-%m-%Y-screen.png)"
+			bind = $mainMod, I, exec, grim -g"$(slurp)" -l 0 /home/x/Pictures/"$(date +%d-%m-%Y_%s)"-screen.png
+			bind = $mainMod, P, exec, grim -l 0 /home/x/Pictures/"$(date +%d-%m-%Y_%s)"-screen.png
 			bind = CTRL SHIFT, PRINT, exec, pkill wf-recorder
 			
 			bind = $mainMod, h, movefocus, l
