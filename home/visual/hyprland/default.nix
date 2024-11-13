@@ -39,11 +39,7 @@
 			    active_opacity = 0.9
 			    inactive_opacity = 0.9
 			
-			    drop_shadow = true
-			    shadow_range = 4
-			    shadow_render_power = 3
-			    col.shadow = rgba(1a1a1aee)
-			
+			    drop_shadow = false
 			    
 			    blur {
 			        enabled = true

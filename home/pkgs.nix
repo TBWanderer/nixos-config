@@ -13,6 +13,7 @@
 		burpsuite
 		cassette
 		cava
+		chromium
 		cliphist
 		cool-retro-term
 		direnv
@@ -37,7 +38,6 @@
 		neovide
 		nh
 		nixd
-		npm
 		obsidian
 		ollama-cuda
 		p7zip
@@ -49,11 +49,13 @@
 		ripgrep
 		rofi-wayland
 		slurp
+		sqlitestudio
 		sqlmap
 		stegsolve
 		swayimg
 		swww
 		syncthing
+		telegram-desktop
 		thunderbird
 		tor
 		tor-browser
@@ -62,7 +64,6 @@
 		unzip
 		vesktop
 		waybar
-		whatsapp-for-linux
 		wineWowPackages.full
 		wireshark
 		xdg-utils

@@ -20,7 +20,7 @@
 		supportedFilesystems = [
 			"ntfs"
 		];
-		kernelPackages = pkgs.linuxKernel.packages.linux_6_10;
+		kernelPackages = pkgs.linuxKernel.packages.linux_6_11;
 	};
 
 	hardware = {
@@ -42,6 +42,7 @@
 		libinput.enable = true;
 		openssh.enable = true;
 		getty.autologinUser = "x";
+		resolved.enable = true;
 
 		xserver = {
 			desktopManager.cinnamon.enable = true;	
@@ -80,8 +81,6 @@
 		};
 		systemPackages = with pkgs; [
 			( import ../../home/visual/lockscreen { inherit pkgs; } )
-			
-			inputs.forkgram.packages.x86_64-linux.default
 			
 			(pkgs.wrapOBS {
     			plugins = with pkgs.obs-studio-plugins; [
@@ -148,7 +147,7 @@
 	};
 
 	nix = {
-		package = pkgs.nixFlakes;
+		package = pkgs.nixVersions.stable;
 		extraOptions = ''
 			experimental-features = nix-command flakes
 		'';

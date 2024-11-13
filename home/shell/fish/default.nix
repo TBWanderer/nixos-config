@@ -20,6 +20,7 @@
 			vim = "nvim";
 			light = "brightnessctl s";
 			update = "nh os switch /home/x/nixos-config";
+			deploy = "nix run github:serokell/deploy-rs -- -s /home/x/server-config#suserv";
 		};
 	};
 }
