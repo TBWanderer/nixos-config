@@ -1,12 +1,12 @@
 { ... }:
 {
-	programs.fish = {
+	programs.fish = let config_path = "/home/x/nixos-config"; in {
 		enable = true;
 		interactiveShellInit = ''
 			set fish_greeting
 		'';
 		loginShellInit = ''
-			Hyprland
+			echo $(tty) | grep "tty" && Hyprland
 		'';
 		shellAliases = {
 			q = "exit";
@@ -19,8 +19,8 @@
 			og = "neovide";
 			vim = "nvim";
 			light = "brightnessctl s";
-			update = "nh os switch /home/x/nixos-config";
-			deploy = "nix run github:serokell/deploy-rs -- -s /home/x/server-config#suserv";
+			update = "nh os switch ${config_path}#laptop";
+			deploy = "nix run github:serokell/deploy-rs -- -s ${config_path}#suserv";
 		};
 	};
 }

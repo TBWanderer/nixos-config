@@ -3,22 +3,22 @@
 
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    	stylix.url = "github:danth/stylix/04afcfc0684d9bbb24bb1dc77afda7c1843ec93b";	
+    	stylix.url = "github:danth/stylix";	
 		home-manager = {
 			url = "github:nix-community/home-manager/";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		rust-overlay = {
-			url = "github:oxalica/rust-overlay";
-		};
-		# forkgram.url = "github:proggerx/forkgram-flake/main";
-		# ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/fe9d7b06e2d03cc8e8ab13290794882d11aff1d7";
-		# zen-browser.url = "github:MarceColl/zen-browser-flake";
+		rust-overlay.url = "github:oxalica/rust-overlay";
+		forkgram.url = "github:proggerx/forkgram-flake/main";
+		ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/release?submodules=1";
+		zen-browser.url = "github:MarceColl/zen-browser-flake";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
 		cwe-cli = {
-			url = "github:NotBalds/cwe-client-cli";
+			url = "github:NotBalds/cwe-rust-cli";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		deploy-rs.url = "github:serokell/deploy-rs";
+		flux.url = "github:Bananad3v/flux";
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -30,10 +30,22 @@
 					./modules/home.nix
 					./modules/base.nix
 					./modules/nvidia.nix
-					./hosts/laptop/configuration.nix
-					./hosts/laptop/hardware-configuration.nix
+					./config/laptop
 				];
 			};
+			suserv = nixpkgs.lib.nixosSystem {
+				system = "x86_64-linux";
+				specialArgs = { inherit inputs; };
+				modules = [ ./config/server ./modules/server ];
+			};
 		};
+		deploy.nodes.suserv = {
+            hostname = "100.91.49.66";
+            profiles.system = {
+                user = "root";
+                sshUser = "root";
+                path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos inputs.self.nixosConfigurations.suserv;
+            };
+        };
 	};
 }
