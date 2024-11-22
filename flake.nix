@@ -19,6 +19,7 @@
 		};
 		deploy-rs.url = "github:serokell/deploy-rs";
 		flux.url = "github:Bananad3v/flux";
+		nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -27,20 +28,21 @@
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
 				modules = [
-					./modules/home.nix
-					./modules/base.nix
-					./modules/nvidia.nix
+					./modules/laptop
 					./config/laptop
 				];
 			};
 			suserv = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
-				modules = [ ./config/server ./modules/server ];
+				modules = [
+					./config/suserv
+					./modules/suserv
+				];
 			};
 		};
 		deploy.nodes.suserv = {
-            hostname = "100.91.49.66";
+            hostname = "suserv";
             profiles.system = {
                 user = "root";
                 sshUser = "root";

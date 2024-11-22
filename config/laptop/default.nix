@@ -80,7 +80,7 @@
 			DIRENV_LOG_FORMAT = "";
 		};
 		systemPackages = with pkgs; [
-			( import ../../home/visual/lockscreen { inherit pkgs; } )
+			( import ../../modules/laptop/home/visual/lockscreen { inherit pkgs; } )
 			
 			(pkgs.wrapOBS {
     			plugins = with pkgs.obs-studio-plugins; [
@@ -153,14 +153,17 @@
 		'';
 	};
 
-	users.users.x = {
-		isNormalUser = true;
-		extraGroups = [ "wheel" "wireshark" "docker" "vboxusers" ];
-		shell = pkgs.fish;
-	#	 packages = with pkgs; [
-	#		 firefox
-	#		 tree
-	#	 ];
+	users.users = {
+		x = {
+			isNormalUser = true;
+			extraGroups = [ "wheel" "wireshark" "docker" "vboxusers" ];
+			shell = pkgs.fish;
+		#	 packages = with pkgs; [
+		#		 firefox
+		#		 tree
+		#	 ];
+		};
+		root.shell = pkgs.fish;
 	};
 
 	system.stateVersion = "24.11"; 
