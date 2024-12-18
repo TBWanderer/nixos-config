@@ -6,7 +6,6 @@
 		../sys
 		../dev
 		./home.nix
-		../suserv/minecraft-new
 	];
 	config = {
 		services.spoofdpi.enable = true;

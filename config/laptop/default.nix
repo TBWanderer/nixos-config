@@ -89,7 +89,9 @@
     				obs-pipewire-audio-capture
     			];
 			})
-			
+
+			inputs.pabc-nix
+
 			xdg-desktop-portal-hyprland
 			wireguard-tools
 			openssl
@@ -114,9 +116,7 @@
 	};
 
 	fonts.packages = with pkgs; [(
-		nerdfonts.override { 
-			fonts = [ "JetBrainsMono" ];
-		}
+		(pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 	)];
 	
 	virtualisation = {
@@ -126,6 +126,7 @@
 			enable = true;
 			enableExtensionPack = true;
 		};
+		libvirtd.enable = true;
 	};
 
 	programs = {
@@ -139,11 +140,12 @@
 			enable = true;
 			tray.enable = true;
 		};
-		steam.enable = true;
 		steam = {
+			enable = true;
 			remotePlay.openFirewall = true;
 			dedicatedServer.openFirewall = true;
 		};
+		virt-manager.enable = true;
 	};
 
 	nix = {
@@ -151,6 +153,14 @@
 		extraOptions = ''
 			experimental-features = nix-command flakes
 		'';
+		settings = {
+			substituters = [
+				"https://cache.garnix.io"
+			];
+			trusted-public-keys = [
+				"cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+			];
+		};
 	};
 
 	users.users = {

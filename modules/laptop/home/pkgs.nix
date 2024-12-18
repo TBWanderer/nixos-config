@@ -1,6 +1,8 @@
-{ pkgs, ... }:
-{
+{ pkgs, inputs, system, ... }:
+let unstable = import inputs.unstable { inherit system; }; in {
 	home.packages = with pkgs; [
+		inputs.pabc-nix.packages.${pkgs.system}.default
+
 		alsa-utils
 		android-studio
 		arduino
@@ -34,6 +36,7 @@
 		lzip
 		mpv
 		mpvpaper
+		nasm
 		nemo
 		neovide
 		nh

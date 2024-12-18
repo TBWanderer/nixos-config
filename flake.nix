@@ -2,14 +2,13 @@
 	description = "Flake NixOS configuration";
 
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    	stylix.url = "github:danth/stylix";	
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    	stylix.url = "github:danth/stylix/release-24.11";	
 		home-manager = {
-			url = "github:nix-community/home-manager/";
+			url = "github:nix-community/home-manager/release-24.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		rust-overlay.url = "github:oxalica/rust-overlay";
-		forkgram.url = "github:proggerx/forkgram-flake/main";
 		ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/release?submodules=1";
 		zen-browser.url = "github:MarceColl/zen-browser-flake";
 		yandex-music.url = "github:cucumber-sp/yandex-music-linux";
@@ -19,7 +18,10 @@
 		};
 		deploy-rs.url = "github:serokell/deploy-rs";
 		flux.url = "github:Bananad3v/flux";
-		nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+		pabc-nix = {
+			url = "github:ProggerX/pabc-nix";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = { nixpkgs, home-manager, ... }@inputs: {

@@ -1,6 +1,7 @@
 { pkgs, lib, ... }:
 {
 	services.hyprpaper.enable = lib.mkForce false;
+	stylix.targets.hyprland.enable = false;
 	programs.wpaperd.enable = true;
 	wayland.windowManager.hyprland = {
 		enable = true;
@@ -39,7 +40,6 @@
 			    active_opacity = 0.9
 			    inactive_opacity = 0.9
 			
-			    drop_shadow = false
 			    
 			    blur {
 			        enabled = true
@@ -51,6 +51,9 @@
 			}
 			
 			
+			decoration:shadow {
+				enabled = false
+			}
 			animations {
 			    enabled = true
 			

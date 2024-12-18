@@ -1,7 +1,7 @@
 { lib, config, inputs, ... }: {
     imports = [
         inputs.flux.nixosModules.default
-        ./servers
+		./baldmc-server
     ];
     options = {
         server.minecraft.enable = lib.mkEnableOption "minecraft server";

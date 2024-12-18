@@ -1,18 +1,18 @@
 { lib, config, pkgs, ... }: {
     options = {
-        server.minecraft.servers.main.enable = lib.mkEnableOption "main minecraft server";
+        server.minecraft.baldmc-server.enable = lib.mkEnableOption "baldmc server";
     };
     imports = [
         ./frp.nix
     ];
-    config = let cfg = config.server.minecraft.servers.main; in lib.mkIf cfg.enable {
+    config = let cfg = config.server.minecraft.baldmc-server; in lib.mkIf cfg.enable {
         flux = {
             servers = {
                 main = {
                     package = pkgs.mkMinecraftServer {
-                        name = "main-minecraft-server";
+                        name = "baldmc-server";
                         src = ./config;
-                        hash = "sha256-s1AtNqlXCbyBkT5PzlSLNud5d/j7DJL5l+QRba/NXMM=";
+                        hash = "sha256-GiNNrOLZsPFVGLRnkeqanCOESlTQSDyfWZijZjuLVz4=";
                     };
                     proxy.enable = false;
                 };
@@ -20,3 +20,4 @@
         };
     };
 }
+
