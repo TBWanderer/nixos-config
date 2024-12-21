@@ -13,6 +13,7 @@ plugins = [
 	{ type = "url", url = "https://s3.mcjars.app/spigot/1.18.2/3498/server.jar" },
 	{ type = "url", url = "https://hangarcdn.papermc.io/plugins/Black1_TV/Passky/versions/2.4.0/PAPER/Passky-2.4.0.jar" },
 	{ type = "url", url = "https://github.com/At87668/MinerTrack/releases/download/1.5.2-beta/MinerTrack-1.5.2-beta.jar" },
+	{ type = "url", url = "https://hangarcdn.papermc.io/plugins/Black1_TV/AdminGUI/versions/1.7.0/PAPER/AdminGUI-1.7.0.jar" },
 ]
 
 [jar]
