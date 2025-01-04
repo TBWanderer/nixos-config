@@ -2,7 +2,7 @@
 {
 	stylix = {
 		enable = true;
-		image = ./wallpaper.jpeg;
+		image = ./wallpaper.jpg;
 		opacity = {
 			terminal = 0.8;
 			desktop = 0.8;

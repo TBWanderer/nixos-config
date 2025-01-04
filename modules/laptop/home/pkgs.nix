@@ -22,6 +22,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		eschalot
 		eza
 		firefox
+		ghidra-bin
 		git
 		github-cli
 		glade
@@ -30,6 +31,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		grim
 		hyprland
 		jetbrains.idea-community-bin
+		lazarus
 		lazygit
 		libreoffice
 		lutris

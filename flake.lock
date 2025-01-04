@@ -326,6 +326,26 @@
         "type": "github"
       }
     },
+    "nix-ld": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1735341044,
+        "narHash": "sha256-ULoitJD5bMu0pFvh35cY5EEYywxj4e2fYOpqZwKB1lk=",
+        "owner": "Mic92",
+        "repo": "nix-ld",
+        "rev": "532718cca4484bd91d8edf8772cb9c34541a8533",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "nix-ld",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1729880355,
@@ -492,6 +512,7 @@
         "deploy-rs": "deploy-rs",
         "flux": "flux",
         "home-manager": "home-manager",
+        "nix-ld": "nix-ld",
         "nixpkgs": "nixpkgs_4",
         "pabc-nix": "pabc-nix",
         "rust-overlay": "rust-overlay",
