@@ -122,9 +122,9 @@
 			bind = $mainMod, R, exec, rofi -show drun
 			bind = $mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
 			
-			bind = , PRINT, exec, grim -g"$(slurp)" - | wl-copy
-			bind = $mainMod, I, exec, grim -g"$(slurp)" -l 0 /home/x/Pictures/"$(date +%d-%m-%Y_%s)"-screen.png
-			bind = $mainMod, P, exec, grim -l 0 /home/x/Pictures/"$(date +%d-%m-%Y_%s)"-screen.png
+			bind = , PRINT, exec, ${import ../../shell/screensave/default.nix { inherit pkgs; }}/bin/screensave fast-manual 
+			bind = $mainMod, I, exec, ${import ../../shell/screensave/default.nix { inherit pkgs; }}/bin/screensave full-copy
+			bind = $mainMod, P, exec, ${import ../../shell/screensave/default.nix { inherit pkgs; }}/bin/screensave full-auto
 			bind = CTRL SHIFT, PRINT, exec, pkill wf-recorder
 			
 			bind = $mainMod, h, movefocus, l
