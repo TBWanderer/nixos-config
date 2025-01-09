@@ -8,6 +8,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		arduino
 		audacity
 		bear
+		binwalk
 		blueman
 		bluez
 		bottom
@@ -48,6 +49,7 @@ let unstable = import inputs.unstable { inherit system; }; in {
 		p7zip
 		pamixer
 		pavucontrol
+		pkg-config
 		prismlauncher
 		python311
 		python311Packages.pip
