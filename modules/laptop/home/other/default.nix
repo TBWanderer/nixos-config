@@ -1,5 +1,6 @@
 { ... }:
 {
 	imports = [
+		./tor-proxy.nix
 	];
 }
